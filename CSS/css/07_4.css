@@ -1,0 +1,17 @@
+.foods1 {
+    /* list-style-type: none; : li에 불릿을 사라지게 하는 속성 */
+    /* list-style-type: decimal; li에 순서 있는 숫자를 나오게 하는 속성 */
+    list-style-type: lower-alpha; /* li에 영어를 a~z순으로 나오게 하는 속성 */
+}
+
+.foods2 {
+    list-style-position: inside; /* inside; : 들여쓰기 */
+    list-style-position: outside; /* outside; : 들여쓰기 미설정 */
+}
+
+/* 불릿 이미지 설정 */
+.foods3 {
+    list-style-image: url(../img/icon.png);
+}
+
+/*  */

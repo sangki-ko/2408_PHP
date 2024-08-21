@@ -1,0 +1,76 @@
+/* 글자색 지정 */
+.h2_color {
+    /* 색상명으로 지정합니다. */
+    /* color: purple;  */
+
+    /* 16진수로 색상 지정 */
+    /* 000 : black, fff : white */
+
+    /* RGB 방식으로 색상 지정 */
+
+    /* RGBA 방식으로 색상 지정 */
+    /* 255, 0, 0, (0~1 = 0부터 1까지 투명도를 설정할 수 있다. */
+    color: rgb(255, 0, 0, 1);
+
+    /* HSLA 방식으로 설정 */
+    color: hsl(202, 100%, 50%, 0.377)
+}
+
+    /* 선으로 텍스트를 꾸미는 속성 */
+    /* text-decoration 에서 선택하여 속성을 넣음 */
+    .td_none { /* none : 효과없음 */
+        text-decoration: none;
+    }
+    .td_underline { /* underline : 밑줄 */
+        text-decoration: underline;
+    }
+    .td_through { /* through : 취소선 */
+        text-decoration: line-through;
+    }
+
+    /* 글자의 정렬 */
+    .aline_left {
+        text-align: left;
+    }
+    .aline_right {
+        text-align: right;
+    }
+    .aline_center {
+        text-align: center;
+    }
+
+    .center {    
+        /* 중앙정렬 하는방법 */
+        background-color: darkgray; /* 글자 배경색 변경 */
+        height: 100px; /* 글자를 위에 올라가게 하는 속성 (height) px는 단위 */
+        text-align: center; /* 가운데로 가게 하는 속성 (center) */
+        line-height: 100px; /* 글자를 밑으로 내려가게 하는 속성 (line-height) px는 단위 */
+    }
+
+    /* 영어 대소문자 변경 */
+    .transform {
+        text-transform: capitalize; /* 제일 첫글자를 대문자로 바꿔주는 속성 (capitalize) */
+
+        /* 전부 대문자로 변환 */
+        text-transform: uppercase; /* 전부 대문자로 변환하게 만들어주는 속성 (uppercase) */
+
+        /* 전부 소문자로 변환 */
+        text-transform: lowercase; /* 전부 소문자로 변환하게 만들어주는 속성 (lowercase) */
+    }
+
+        /* 자간 및 단어간의 간격 */
+     .letter_spacing {
+        letter-spacing: 10px;
+    }
+    .word_spacing {
+        word-spacing: 20px;
+    }
+
+    /* 그림자 효과 */
+     .shadow {
+        /* "가로위치, 세로위치, 그림자 크기, 색상 / 총 4개의 값이 들어감 */
+        text-shadow: 5px 5px 5px #ff0000;
+     }
+
+    
+    

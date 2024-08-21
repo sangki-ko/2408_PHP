@@ -1,0 +1,22 @@
+#test1 {
+    color: skyblue;
+}
+/* -------------------- */
+
+#id-h2 {
+    color: aqua;
+}
+
+.class-h2 {
+    color: blue;
+}
+
+h2 {
+    color: orange !important;
+}
+
+/* !important는 최대한 자제한다 */
+
+h2 {
+    color: red;
+}

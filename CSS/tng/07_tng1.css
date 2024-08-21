@@ -1,0 +1,14 @@
+strong {
+    color: #ad3000;
+}
+
+.trend {
+    list-style-position: inside;
+    list-style-type: none;
+    line-height: 2rem;
+    font-size: 20px;
+}
+
+.design {
+    font-size: 10px;
+}

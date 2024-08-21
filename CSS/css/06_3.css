@@ -1,0 +1,32 @@
+/* 전체선택자 : (* -> {}) 모든 요소를 선택 */
+/* margin : 네모 박스에 바깥 쪽 여백을 뜻함
+   padding : 네모 박스 안 쪽 여백을 뜻함  */
+* {
+    margin: 0px;
+    padding: 0px;
+    color: skyblue;
+}
+
+/* 타입선택자 : 특정 태그명을 가진 모든 요소를 선택 */
+    (태그명을 적은 후 중괄호)
+h1 {
+    color: red;
+}
+
+/* 클래스 선택자 : 주어진 class명을 가진 모든 요소를 선택 */
+    /* 앞에 .을 붙여둔 뒤 두 단어 이상 사용할 경우 -, _ 사용 
+        클래스 명은 본인이 정할 수 있음
+    */
+.font-color {
+    color: orange;
+}
+
+/* ID 선택자 : html 요소의 id로 선택 / #으로 선택 (#뒤에 이름은 자유, 본인 선택) */
+#strong-black {
+    color: black;
+}
+
+/* 그룹 선택자 : ","를 구분자로 해서 복수의 요소를 선택 */
+#strong-black, .font-color {
+    font-size: 40px;
+}
