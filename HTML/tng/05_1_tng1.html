@@ -8,50 +8,81 @@
 <body>
     <form action="">
     <h1>회원가입을 환영합니다.</h1>
-    <br>
 
     <fieldset>
         <legend>사용자 정보</legend>
         <ul>
-            <li><label for="id">아이디</label>
-                <input type="text" placeholder="4자 ~ 10자 사이, 공백없이" id="id">
+            <li>
+                <label for="id">아이디</label>
+                <input type="text" placeholder="4자 ~ 10자 사이, 공백없이" id="id" required minlength="4" maxlength="10">
             </li>
             <li>
                 <label for="email">이메일</label>
-                <input type="text" id="email">
+                <input type="text" id="email" required>
             </li>
             <li>
                 <label for="password">비밀번호</label>
-                <input type="text" placeholder="문자와 숫자, 특수 기호 포함" id="password">
+                <input type="password" placeholder="문자와 숫자, 특수 기호 포함" id="password" required>
             </li>
             <li>
-                <label for="password">비밀번호 확인</label>
-                <input type="text" id="password">
+                <label for="passwordchk">비밀번호 확인</label>
+                <input type="password" id="passwordchk" required>
             </li>
             <li>
                 <label for="path">가입 경로</label>
-                <select id="path">
-                    <option value="blog">블로그</option>
-                    <option value="search">검색</option>
-                    <option value="sns">SNS</option>
-                    <option value="etc">기타</option>
+                <select name="path" id="path">
+                    <option value="0">블로그</option>
+                    <option value="1">친구추천</option>
+                    <option value="2">검색</option>
+                    <option value="3">기타</option>
                 </select>
             </li>
             <li>
                 <label for="memo">메모</label>
-                <textarea cols="40" rows="10" placeholder="남길 말씀이 있다면 여기에" ></textarea>
+                <textarea name="memo" id="memo" cols="40" rows="10" placeholder="남길 말씀이 있다면 여기에" ></textarea>
             </li>
         </ul>
     </fieldset>
     <fieldset>
         <legend>이벤트와 새로운 소식</legend>
-        <input type="radio" name="event" id="send" checked>
+        <input type="radio" name="event" id="send">
         <label for="send">메일 수신</label>
-        <input type="radio" name="event" id="nosend">
+        <input type="radio" name="event" id="nosend" checked>
         <label for="nosend">메일 수신 안 함</label>
     </fieldset>
     <button type="submit">가입하기</button>
     <button type="reset">취소</button>
 </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <h1>예약 정보</h1>
+            
+                <p>
+                    <label for="name">이 름</label>
+                    <input type="text" id="name">
+                </p>
+                <p>
+                    <label for="call">전 화</label>
+                    <input type="text" id="call">
+                </p>
+                <p>
+                    <label for="email">이메일</label>
+                    <input type="text" id="email">
+                </p>
+            <button type="submit">예약하기</button>
+        </fieldset>
+    </form>
+    
 </body>
 </html>
