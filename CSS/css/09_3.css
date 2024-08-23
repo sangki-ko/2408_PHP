@@ -1,0 +1,26 @@
+div {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+/* 콘텐츠 안에 두가지 이상의 색상을 점진적으로 변화 시키는 것을 그라데이션이라고 한다.
+    기본적으로 "background" 속성이 들어간다.
+    색 개수엔 제한이 없다. */
+
+    /*  */
+.div1 {
+    background: linear-gradient(
+        0deg, blue, skyblue , purple, black
+    );
+}
+
+
+/* 모양 : circle(원형), ellipse(타원형)
+     */
+.div2 {
+    background: radial-gradient(
+       circle at 0% 20%, blue, skyblue, purple
+    );
+}

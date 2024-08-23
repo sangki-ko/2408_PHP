@@ -1,6 +1,9 @@
 .div-img {
-    width: 500px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
+
+    overflow: scroll;
+
 
     background-image: url(../img/dog.jpg)/* url(../img/icon.png) */;
     /* content가 넘침 때 스크롤 설정
@@ -24,7 +27,11 @@
             -퍼센티지 : 25% 75%
             -edge offsats : bottom 30px right 50px
         */
+
+        /* background-attachment : 스크롤이 생길경우 배경 이미지의 고졍 여부 설정 */
         background-position: center;
+
+        background-attachment: fixed;
 }
 
 .div-repeat {
