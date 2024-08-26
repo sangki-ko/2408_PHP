@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    background-color: silver;
+    width: 600px;
+    height: 50px;
+    list-style-type: none;
+    box-shadow: 5px 10px 5px 5px black;
+/* box-shadow : 가로 세로 번짐 크기 색상*/
+}
+
+li {
+    text-align: center;
+    border-right: 1px solid greenyellow;
+    width: 100px;
+    height: 50px;
+    float: left; 
+    line-height: 50px;
+}
+
+li:hover {
+    color: black;
+    background-color: #4d4d4d;
+}
+
+.red {
+    border: none;
+    
+}
+
+.red:hover {
+    color: white;
+    background-color: red;
+}
+
+
+
+
+
