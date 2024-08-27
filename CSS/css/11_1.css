@@ -1,0 +1,16 @@
+.ball {
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    /* border-radius: 50%; */
+    animation: updown 1s infinite alternate ease-in-out;
+}
+
+@keyframes updown {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
