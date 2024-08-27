@@ -12,7 +12,7 @@ main {
     position 속성 : HTML 요소를 배치하는 방법을 지정합니다.
     ** 속성 값 **
         -static : 기본 값으로 일반적인 문서의 흐름에 맞춰 배치합니다.    
-        -relative :
+        -relative : 
             static 위치에서 top, right, bottom, left와 같은 속성에 의한 상태
             그외에는 static와 같습니다.
         -absolute :

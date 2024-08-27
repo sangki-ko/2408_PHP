@@ -40,12 +40,7 @@
     }
 
     .center {    
-        /* 중앙정렬 하는방법 */
-        background-color: darkgray; /* 글자 배경색 변경 */
-        height: 100px; /* 글자를 위에 올라가게 하는 속성 (height) px는 단위 */
-        text-align: center; /* 가운데로 가게 하는 속성 (center) */
-        line-height: 100px; /* 글자를 밑으로 내려가게 하는 속성 (line-height) px는 단위 */
-    }
+    }   
 
     /* 영어 대소문자 변경 */
     .transform {
