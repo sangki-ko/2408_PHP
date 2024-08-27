@@ -1,0 +1,113 @@
+.item {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+.container-row {
+    display: flex;
+    /* 가로축으로 정렬 
+    가로로 기준을 잡는 걸 주축
+    세로로 기준을 잡는 걸 교차축 
+    
+    flex-direction : row; <- 주축을 가로로 정해주는 속성
+    flex-direction :   column; <- 주축을 세로로 정해주는 속성
+    flex-direction : column-reverse; = 세로축을 역으로 정렬
+    flex-direction : row-reverse; = 가로축을 역으로 설정
+        reverse는 현업에서는 쓰지 않는다.
+        display: flex; : 작은 레이아웃을 설정할 때 많이 사용*/
+
+
+    /* flex-direction: row; */
+    flex-direction : row;
+}
+
+.container-wrap {
+    display: flex;
+    /* 개행 없음 */
+    /* flex-wrap: nowrap; */
+
+    /* 너비가 모자르면 개행 */
+    flex-wrap: wrap ;
+
+    /* 너비가 모자르면 역순으로 개행 */
+    /* flex-wrap: wrap-reverse; */
+
+
+}
+
+.container-flow {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container-justify-content {
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content 태그 속성 / 주축을 기준으로 정렬 
+
+    flex-start, start : 주축에 시작 지점에 배치
+    flex-end, end : 주축에 끝 지점에 배치
+    center : 주축에 가운데 지점에 배치
+    space-between: 주축에 시작점에 첫번째 항목에 배치하고 주축의 끝점에 마지막 항목을 
+                   배치하고. 나머지 항목들을 적정한 간격으로 조절
+    
+    space-around; : 주축에 같은 간격으로 배치
+    
+    */
+    /* gap ; : 아이템들 사이간에 간격을 고정 */
+    /* justify-content: space-around; */
+    gap: 20px;
+}
+
+.container-align-items {
+    display: flex;
+    flex-flow: row wrap;
+    height: 700px;
+    background-color: blue;
+    /* justify-content: center; */
+    /* 
+    align-items: flex-start : 교차축의 시작점에 맞춰서 배치
+    align-items: flex-end : 교차축의 끝점에 맞춰서 배치
+    align-items: center : 교차축의 가운데에 맞춰서 배치
+        div 클래스명을 다르게 한 뒤 같은 플렉스 설정을 하면 어떻게 되나?*/
+    align-items: center;
+}
+
+.container-align-self {
+    display: flex;
+    flex-flow: row wrap;
+    height: 700px;
+    background-color: blue;
+
+}
+
+.container-align-self :nth-child(1) {
+    /* 교차축의 시작점에 맞추어 배치 */
+    align-self: flex-start;
+}
+
+.container-align-self :nth-child(2) {
+    /* 교차축의 끝점에 맞추어 배치 */
+    align-self: flex-end;
+}
+
+.container-align-self :nth-child(5) {
+    /* 교차축의 가운데에 맞추어 배치 */
+    align-self: center;
+}
+
+.container-align-content {
+    /* 여러 줄이 함께 움직여 배치 */
+    display: flex;
+    flex-flow: row wrap;
+    height: 700px;
+    background-color: blue;
+
+    /* align-content : flex-start : 교차축의 시작점에 맞추어 배치 
+       align-content : flex-end : 교차축의 끝점에 맞추어 배치
+       align-content : center : 교차축의 가운데에 맞추어 배치*/
+    align-content: 
+    justify-content: center;
+}

@@ -10,7 +10,7 @@ fieldset {
     background-image: url(../img/cat.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center;r
+    background-position: center;
     margin: 20px;
 }
 
@@ -26,6 +26,7 @@ label {
 
 input {
     border-top : 2px solid black;
+    background:none;
 }
 
 input:focus {
@@ -48,6 +49,7 @@ input:focus {
 textarea {
     width: 250px;
     height: 250px;
+    background:none;
 }
 
 textarea:focus {
@@ -80,8 +82,4 @@ span {
     display: none;
     font-size: 25px;
     padding: 5px;
-}
-
-input, textarea {
-    background:none;
 }
