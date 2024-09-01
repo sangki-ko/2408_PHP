@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    
     font-family: "Song Myung", serif;
     font-weight: 900;
     font-style: normal;
 }   
+
+html {
+    scroll-behavior: smooth;
+}
   
 button:hover {
     opacity: 0.5;
