@@ -26,11 +26,16 @@ WHERE emp_id = 100002
 
 UPDATE salaries
 SET 
-	salary = 50000000
+	salary = 50000000, updated_at = NOW()
 WHERE salary <= 26000000
 ;
 
 SELECT *
 FROM salaries
-WHERE salary <= 26000000
+WHERE salary = 50000000
+;
+
+SELECT *
+FROM salaries
+ORDER BY salaries.emp_id ASC, salaries.start_at ASC
 ;
