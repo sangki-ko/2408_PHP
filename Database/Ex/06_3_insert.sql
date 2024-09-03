@@ -124,3 +124,8 @@ VALUES (
 	,NULL
 );
 
+
+DELETE
+FROM
+	employees
+WHERE emp_id = 100003;

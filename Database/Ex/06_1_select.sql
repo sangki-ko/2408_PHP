@@ -277,8 +277,8 @@ WHERE	end_at IS NULL
 	GROUP BY dept_code;
 	
 	
--- LIMIT, OFFSET : 출력하는 데이터의 개수 제한
-
+-- LIMIT, OFFSET : 수 제한
+출력하는 데이터의 개
 SELECT *
 FROM salaries
 ORDER BY emp_id ASC
