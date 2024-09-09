@@ -24,6 +24,7 @@ JOIN departments
 -- 왼쪽 테이블을 기준 테이블로 두고 JOIN을 실행
 -- 기준 테이블의 모든 데이터를 출력하고
 -- 조인 대상 테이블에 없는 값은 NULL로 출력
+
 -- 모든 사원의 사번, 이름, 부서장 시작날짜
 
 SELECT 
@@ -35,8 +36,8 @@ FROM employees
 	LEFT JOIN department_managers
 		ON employees.emp_id = department_managers.emp_id
 		AND department_managers.end_at IS NULL
-	LEFT JOIN departments
-	  	ON department_managers.dept_code = departments.dept_code
+	  LEFT JOIN departments
+--  	ON department_managers.dept_code = departments.dept_code
 ORDER BY start_at DESC;
 		
 		
@@ -86,3 +87,4 @@ SELECT
 	,emp_id
 FROM employees
 WHERE sup_id IS NOT NULL;
+
