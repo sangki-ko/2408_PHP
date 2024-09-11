@@ -36,7 +36,7 @@ else {
 $answer1 = 2;
 $answer2 = 5;
 
-if($answer1 >=== $answer2) {
+if($answer1 === $answer2) {
     echo "100점";
 } 
 else if($answer1 === 2 || $answer2 === 5) {
