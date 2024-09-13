@@ -12,3 +12,4 @@ foreach($arr5 as $key => $val) {
     echo $key."end".$val;
 }
 
+

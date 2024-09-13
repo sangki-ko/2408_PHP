@@ -14,7 +14,7 @@ for($i = 1; $i <= 100; $i++) {
         echo "짝\n";
         continue;
     }
-    echo $i."\n";
+    echo $i.", ";
 }
 
 
@@ -27,11 +27,12 @@ $arr = [
     ["id" => 4, "name" => "갑돌이", "gender" => "M", "salary" => "8000" ]
  ];
 
-foreach($arr as $key => $val) {
+foreach($arr as $val) {
     if($val["salary"] >= "5000" && $val ["gender"] === "M") {
      echo $val["id"], $val["name"];
     }
-}
+} 
+
 
 // foreach($arr as $key => $val) {
 //     if($key === 0);
