@@ -10,14 +10,16 @@ try {
     // PDO class 인스턴스화
     $conn = my_db_conn();
 
+    // transaction 시작
     $conn->beginTransaction();
 
     $sql =  " UPDATE salaries "
             ." set "
-            ."  updated_at = NOW()"
-            ."  ,end_at = DATE(NOW())"
+            ."      updated_at = NOW()"
+            ."      ,end_at = DATE(NOW())"
             ." WHERE "
-            ." emp_id = :emp_id "
+            ."      emp_id = :emp_id "
+            ."  AND end_at IS NULL "
             ;
     $arr_prepare = [
         "emp_id" => 100015

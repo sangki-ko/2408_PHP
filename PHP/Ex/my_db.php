@@ -25,6 +25,3 @@ $my_otp = [
 // return : 함수에 값을 반환해주는 역할
 return new PDO($my_dsn, $my_user, $my_password, $my_otp);
 }
-
-new PDO($my_dsn, $my_user, $my_password, $my_otp);
-
