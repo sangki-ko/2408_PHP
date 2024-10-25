@@ -52,7 +52,24 @@ function test4(a, b) {
     }
 }
 
-test [
-    
-]
+// -------------
+// 즉시 실행 함수
+// -------------
+// 딱 한 번만 실행이 됨.
 
+const execFnc = (function(a, b) {
+    return a + b;
+})(5, 6);
+
+// ----------------
+// 콜 백 함수
+// ----------------
+function myCallBack() {
+    console.log('myCallBack');
+}
+
+function myChkPrint(callBack, flg) {
+    if(flg) {
+        callBack();
+    }
+}
