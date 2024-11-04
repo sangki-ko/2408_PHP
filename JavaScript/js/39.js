@@ -5,7 +5,7 @@
 // 고유한 ID로 요소를 선택
 const TITLE = document.getElementById('title');
 
-// TITLE.style.color = 'red';
+TITLE.style.color = 'red';
 
 // 태그명으로 요소를 선택하는 방법
 const H1 = document.getElementsByTagName('h1');
