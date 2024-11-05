@@ -2,7 +2,8 @@
 
 // 기본 경로 관련
 define('_ROOT', $_SERVER['DOCUMENT_ROOT']);
-define('_PATH_IMG', '/view/img');
+define('_PATH_VIEW', _ROOT.'/View');
+define('_PATH_IMG', '/View/img');
 
 // DB 관련
 define('_MARIA_DB_HOST', 'localhost');
