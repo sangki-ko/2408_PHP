@@ -2,6 +2,7 @@
 namespace Controllers;
 
 use Models\BoardsCategory;
+use Lib\Auth;
 
 class Controller {    
     protected $arrErrorMsg = []; // 화면에 표시할 에러 메세지 리스트
@@ -15,6 +16,7 @@ class Controller {
             session_start();
         }
         // 유저 로그인 및 권한 체크
+        Auth::chkAuthorization();
 
         // 헤더 드롭 다운 리스트 획득
         $boardsCategoryModel = new BoardsCategory;
