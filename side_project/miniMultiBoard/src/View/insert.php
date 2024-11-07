@@ -26,6 +26,7 @@
             </div>
                 <button type="submit" class="btn btn-dark w-100 mb-2">작성</button>
                 <a href="/boards"><button type="button" class="btn btn-secondary w-100">취소</button></a>
+                <input type="hidden" name="bc_type" value="<?php echo $this->boardType ?>">
           </form>
     </main>
 

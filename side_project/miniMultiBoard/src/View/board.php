@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="../View/css/free.css">
+    <link rel="stylesheet" href="/View/css/free.css">
     <script src="View/Js/board.js" defer></script>
     <title>자유게시판</title>
 </head>
@@ -13,8 +13,9 @@
     <?php require_once('View/inc/header.php') ?>
 
       <div class="mt-5 mb-5 text-center">
+        <input type="hidden" id="inputBoardType" name="board_type" value="<?php  echo $this->boardType; ?>">
         <h1 class="mb-4"><?php echo $this->getBoardName(); ?></h1>
-        <svg id="btnInsert" value="<?php  echo $this->boardType;  ?>"  xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+        <svg id="btnInsert" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
             <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"/>
           </svg>
       </div>

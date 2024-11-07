@@ -55,4 +55,36 @@ class Board extends Model {
             exit;
         }
     }
+    
+    public function insertBoard(array $paramArr) {
+        try {
+            $sql = 
+                ' INSERT INTO '
+                .' boards '
+                .' ( '
+                .' u_id '
+                .' ,b_title '
+                .' ,b_content '
+                .' ,b_img '
+                .' ,bc_type '
+                .' ) '
+                .' VALUES '
+                .' ( '
+                .' :u_id '
+                .' ,:b_title '
+                .' ,:b_content '
+                .' ,:b_img '
+                .' ,:bc_type '
+                .' ) '
+            ;
+
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($paramArr);
+            return $stmt->rowCount();
+
+        }catch(Throwable $th) {
+            echo 'Board->insertBoard(), '.$th->getmessage();
+            exit;
+        }
+    }
 }
