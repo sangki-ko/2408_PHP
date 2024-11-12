@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email')->index();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
+        Schema::table('boards', function(Blueprint $table) {
+            $table->foreign('u_id')->references('u_id')->on('users');
+            // $table->foreign('bc_type')->references('bc_type')->on('boards_category');
         });
     }
 
@@ -27,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        Schema::table('boards', function(Blueprint $table) {
+            $table->dropForeign(['u_id']);
+            // $table->dropForeign(['bc_type']);
+        });
     }
 };

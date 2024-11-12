@@ -156,7 +156,7 @@ Route::get('/test', [TestController::class, 'index']);
 // 커맨드로 Route 리스트 찾기 : php artisan route:list
 
 // only(['사용할 액션 지정'])
-// Route::resource('/task', TaskController::class)->only(['index', 'create']);
+Route::resource('/task', TaskController::class)->only(['index', 'create']);
 // GET|HEAD        task ....................................................................................................... task.index › TaskController@index  
 // POST            task ....................................................................................................... task.store › TaskController@store  
 // GET|HEAD        task/create .............................................................................................. task.create › TaskController@create  
@@ -166,7 +166,7 @@ Route::get('/test', [TestController::class, 'index']);
 // GET|HEAD        task/{task}/edit ............................................................................................. task.edit › TaskController@edit  
 
 // except(['사용하지 않을 액션 지정'])
-Route::resource('/task', TaskController::class)->except(['index', 'create']);
+// Route::resource('/task', TaskController::class)->except(['index', 'create']);
 // POST            task ....................................................................................................... task.store › TaskController@store  
 // GET|HEAD        task/{task} .................................................................................................. task.show › TaskController@show  
 // PUT|PATCH       task/{task} .............................................................................................. task.update › TaskController@update  
