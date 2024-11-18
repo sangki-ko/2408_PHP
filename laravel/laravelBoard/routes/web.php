@@ -21,13 +21,13 @@ Route::get('/', function () {
 });
 
 // 로그인 관련
-Route::get('/login', [UserController::class, 'goLogin'])->name('goLogin');
-Route::post('/login',  [UserController::class, 'login'])->name('login');
+Route::middleware('guest')->get('/login', [UserController::class, 'goLogin'])->name('goLogin');
+Route::middleware('guest')->post('/login',  [UserController::class, 'login'])->name('login');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 // 회원가입 관련
-Route::get('/regist', [UserController::class, 'regist'])->name('regist');
-Route::post('/regist', [UserController::class, 'goRegist'])->name('goRegist');
+Route::middleware('guest')->get('/regist', [UserController::class, 'regist'])->name('regist');
+Route::middleware('guest')->post('/regist', [UserController::class, 'goRegist'])->name('goRegist');
 
 // 게시판
 // except(안 쓰는 것1, 안 쓰는 것2) : 안 쓰는 것들을 지정 해줘서 라우트가 실행이 안되게 함

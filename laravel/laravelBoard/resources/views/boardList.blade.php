@@ -13,14 +13,16 @@
     
 @section('main')
 <div class="mt-5 mb-5 text-center">
-    <h1 class="mb-4">자유게시판</h1>
-    <a href="{{ route('boards.create') }}"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+    <h1 class="mb-4">{{ $boardName->bc_name }}</h1>
+    {{-- <a href="{{ route('boards.create') }}"> --}}
+        <svg onclick="redirectInsert({{ $boardName->bc_type }});" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
         <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"/>
-      </svg></a>
-  </div>
+      </svg>
+    {{-- </a> --}}
+</div>
   <main>
   @foreach ($data as $item)
-        <div class="card">
+        <div class="card" id="card{{ $item->b_id }}">
             <img src="{{ $item['b_img'] }}" class="card-img-top" style="height: 300px;" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">{{ $item['b_title'] }}</h5>
@@ -45,8 +47,13 @@
                 <br>
                 <img id="modalImg" src="./img/농담1.jfif" alt="" class="object-fit-cover" style="width: 100%;">
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+            <div class="modal-footer justify-content-between">
+                <div id="modalDeleteParent">
+                    {{-- <button type="button" class="btn btn-warning" id="modalDelete">삭제</button> --}}
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                </div>
             </div>
         </div>
     </div>
