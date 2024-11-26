@@ -41,4 +41,8 @@ class User extends Authenticatable
         return $date->format('Y-m-d H:i:s');
     }
 
+    // 유저와 보드의 관게를 맺겠다는 듰
+    public function boards() {
+        return $this->hasMany(Board::class, 'user_id');
+    }
 }
