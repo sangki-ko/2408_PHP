@@ -24,8 +24,8 @@ class Board extends Model
     }
 
     // 1대 다수를 뜻한다 1인 쪽에는 hasMany, 다수 쪽에는 belongsTo를 선언해서 연결해준다.
-    public function users() {
-        return $this->belongsTo(User::class, 'user_id');
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id')->select('user_id', 'name');
     }
 }
 
